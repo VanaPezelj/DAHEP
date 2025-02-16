@@ -22,6 +22,8 @@ LepMomentumCartesian = {
 E = sum([pow(value,2) for value in LepMomentumCartesian.values()]) #E=px^2+py^2+pz^2
 E=np.sqrt(E)
 
+print(E);
+
 Lep4MomentumCartesian = {**LepMomentumCartesian, "E": E} #add energy to create 4-momentum vector
 
 Z1,H={},{}

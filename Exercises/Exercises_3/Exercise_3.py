@@ -56,8 +56,8 @@ def random_pdf(pdf, N, x_min, x_max):
     x_rand = []
     n_tries = 0
     while (len(x_rand) < N):
-        n_tries += 2
-        (x,y)= (random.uniform(x_min,x_max), random.uniform(0.0,1.0/np.sqrt(2*np.pi)))
+        n_tries += 1
+        (x,y)= (random.uniform(x_min,x_max), random.uniform(0.0,1.0/np.sqrt(2*np.pi))) 
         if(pdf(x) > y):
             x_rand.append(x)
     print("I had to generate " + str(n_tries) + " random numbers to draw " + str(N) + " random numbers according to a given PDF.")
