@@ -25,7 +25,7 @@ print("python fit Least Squares uncertainty " + str(sigma_m))
 
 plt.errorbar(F, a, yerr=sigma_a, fmt='o')
 
-F_line = np.arange(0.8*min(F), 1.3*max(F), 1)
+F_line = np.arange(0.8*min(F), 1.3*max(F), 1)   # Range for fit curve
 a_line = pdf(F_line, m_hat)
 plt.plot(F_line, a_line, '--', color='red')
 plt.xlabel('F [N]')
